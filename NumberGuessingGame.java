@@ -7,13 +7,13 @@ public class NumberGuessingGame {
         Random random = new Random();
         int maxNumber = 0;
 
-        // เลือกระดับความยาก
-        System.out.println("นี่คือ!!เกมทายตัวเลข!");
-        System.out.println("เลือกความยากได้เลย:");
-        System.out.println("1. ง่าย (1-50)");
-        System.out.println("2. ปานกลาง (1-100)");
-        System.out.println("3. ยาก (1-500)");
-        System.out.print("กรุณาเลือกความยาก (1-3): ");
+    
+        System.out.println("ยนร•รจยคร—ร!!ร ยกรยทร’รยตร‘รร ร…ยข!");
+        System.out.println("ร ร…ร—รยกยครร’รรร’ยกรคยดรฉร ร…ร:");
+        System.out.println("1. ยงรจร’ร (1-50)");
+        System.out.println("2. ยปร’ยนยกร…ร’ยง (1-100)");
+        System.out.println("3. รร’ยก (1-500)");
+        System.out.print("ยกรรยณร’ร ร…ร—รยกยครร’รรร’ยก (1-3): ");
 
         int difficulty = scanner.nextInt();
 
@@ -28,30 +28,30 @@ public class NumberGuessingGame {
                 maxNumber = 500;
                 break;
             default:
-                System.out.println("คุณเลือกโหมดไม่ถูกต้อง! ระบบจะใช้ระดับ: ปานกลาง (1-100)");
+                System.out.println("ยครยณร ร…ร—รยกรขรรยดรครรจยถรยกยตรฉรยง! รรยบยบยจรรฃยชรฉรรยดร‘ยบ: ยปร’ยนยกร…ร’ยง (1-100)");
                 maxNumber = 100;
         }
 
-        // สุ่มเลขตามระดับความยาก
+        // รรรจรร ร…ยขยตร’รรรยดร‘ยบยครร’รรร’ยก
         int randomNumber = random.nextInt(maxNumber) + 1;
         int guess;
         int attempts = 0;
 
-        System.out.println("ระบบได้สุ่มตัวเลขระหว่าง 1 ถึง " + maxNumber + " แล้ว");
-        System.out.println("มาเริ่มเลย!");
+        System.out.println("รรยบยบรคยดรฉรรรจรยตร‘รร ร…ยขรรรรรจร’ยง 1 ยถร–ยง " + maxNumber + " รกร…รฉร");
+        System.out.println("รร’ร รร”รจรร ร…ร!");
 
         do {
-            System.out.print("กรอกตัวเลขที่คุณคิดว่าใช่: ");
+            System.out.print("ยกรรยกยตร‘รร ร…ยขยทร•รจยครยณยคร”ยดรรจร’รฃยชรจ: ");
             guess = scanner.nextInt();
             attempts++;
 
             if (guess > randomNumber) {
-                System.out.println("มากไป! ลองใหม่อีกที.");
+                System.out.println("รร’ยกรคยป! ร…รยงรฃรรรจรร•ยกยทร•.");
             } else if (guess < randomNumber) {
-                System.out.println("น้อยไป! ลองใหม่อีกที.");
+                System.out.println("ยนรฉรรรคยป! ร…รยงรฃรรรจรร•ยกยทร•.");
             } else {
-                System.out.println("Bravo!! ตัวเลขที่ถูกต้องคือ " + randomNumber);
-                System.out.println("คุณกรอกตัวเลขไปทั้งหมด " + attempts + " ครั้ง.");
+                System.out.println("Bravo!! ยตร‘รร ร…ยขยทร•รจยถรยกยตรฉรยงยคร—ร " + randomNumber);
+                System.out.println("ยครยณยกรรยกยตร‘รร ร…ยขรคยปยทร‘รฉยงรรยด " + attempts + " ยครร‘รฉยง.");
             }
 
         } while (guess != randomNumber);
